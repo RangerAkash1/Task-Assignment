@@ -1,0 +1,46 @@
+Request-
+POST http://localhost:8000/api/weather/
+
+Content-Type: application/json
+Authorization: Bearer <your_access_token>
+
+{
+  "locations": ["London", "Mumbai", "Pune", "Paris"]
+}
+
+Response-
+
+[
+    {
+        "location": "London, United Kingdom",
+        "temp_c": 8.0,
+        "humidity": 100,
+        "condition": "Light rain",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/296.png",
+        "localtime": "2024-03-10 8:54"
+    },
+    {
+        "location": "Mumbai, India",
+        "temp_c": 33.0,
+        "humidity": 36,
+        "condition": "Overcast",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/122.png",
+        "localtime": "2024-03-10 14:24"
+    },
+    {
+        "location": "Pune, India",
+        "temp_c": 35.7,
+        "humidity": 11,
+        "condition": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+        "localtime": "2024-03-10 14:24"
+    },
+    {
+        "location": "Paris, France",
+        "temp_c": 8.0,
+        "humidity": 93,
+        "condition": "Light rain",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/296.png",
+        "localtime": "2024-03-10 9:54"
+    }
+]

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css');
+
+
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button{
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+  background: rgb(173, 173, 255);
+  color: green;
+  &:hover{
+      background: rgb(225, 225, 255);
+      color: #000000;
+  }
+}

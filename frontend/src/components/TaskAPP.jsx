@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axiosInstance from "../axiosInstance";
 import { toast } from "react-toastify";
-import "./TaskAPP.css";
 
 function TaskAPP() {
   const [tasks, setTasks] = useState([]);
@@ -26,7 +25,12 @@ function TaskAPP() {
   }, []);
 
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        margin: "1rem",
+      }}
+    >
       <button
         onClick={() => {
           localStorage.removeItem("token");
@@ -40,7 +44,6 @@ function TaskAPP() {
         onClick={() => {
           fetchTasks();
         }}
-        x
         className="button"
       >
         Refresh

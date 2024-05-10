@@ -13,7 +13,7 @@ const App = () => {
       <ToastContainer />
       <Routes>
         <Route element={<PrivateRoutes />}>
-          <Route element={<TaskAPP />} path="/" exact />
+          <Route element={<TaskAPP />} path="/TaskAPP" exact />
         </Route>
         <Route element={<SignIn />} path="/signin" />
         <Route element={<Register />} path="/register" />

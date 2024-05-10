@@ -1,0 +1,48 @@
+.task_card{
+    /* make is simple just look like a paragraph remove all the default styles */
+    border: none;
+    outline: none;
+    background: none;
+    color: #000 !important;
+    input[type="text"] {
+        border: none;
+        outline: none;
+        background: none;
+        color: #000 !important;
+        width: 100%;
+    }
+
+    .priority{
+        padding: 5px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: small;
+
+    }
+
+    .low{
+        background-color: green;
+    }
+    .medium{
+        background-color: yellow;
+    }
+    .high{
+        background-color: red;
+    }
+
+    .btn{
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        background: rgb(173, 173, 255);
+        color: #000000;
+        &:hover{
+            background: rgb(225, 225, 255);
+            color: #000000;
+        }
+    }
+
+}
+.completed{
+    text-decoration: line-through;
+}

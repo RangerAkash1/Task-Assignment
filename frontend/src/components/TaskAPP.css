@@ -1,0 +1,31 @@
+.container {
+  margin: 1rem;
+  padding-left: 2%;
+  padding-top: 2%;
+}
+
+.button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.input-search {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-search:focus {
+  outline: none;
+  border-color: #0d1013;
+}

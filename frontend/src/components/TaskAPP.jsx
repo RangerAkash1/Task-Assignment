@@ -91,58 +91,60 @@ function TaskAPP() {
   //   );
   // }
   return (
-    <div className="container">
-      <button
-        onClick={() => {
-          localStorage.removeItem("token");
-          window.location.reload();
-        }}
-        className="button"
-      >
-        Logout
-      </button>
-      <button onClick={fetchTasks} className="button">
-        Refresh
-      </button>
-      <h1>Tasks</h1>
+    <>
+      <div className="container">
+        <button
+          onClick={() => {
+            localStorage.removeItem("token");
+            window.location.reload();
+          }}
+          className="logout-button"
+        >
+          Logout
+        </button>
+        <button onClick={fetchTasks} className="Refresh-button">
+          Refresh
+        </button>
+        <h1>Tasks</h1>
 
-      <button className="button" onClick={() => setNewTask(true)}>
-        New Task
-      </button>
-      <div>
-        <span>Search: </span>
-        <input
-          type="text"
-          placeholder="Search Tasks..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <button className="Task-button" onClick={() => setNewTask(true)}>
+          New Task
+        </button>
+        <div className="Search-span">
+          <span>Search: </span>
+          <input
+            type="text"
+            placeholder="Search Tasks..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+        {newTask && (
+          <Card
+            newTask={newTask}
+            setNewTask={setNewTask}
+            fetchTasks={fetchTasks}
+          />
+        )}
+
+        {/* Add search using title and description */}
+
+        {tasks
+          .filter((task) => {
+            if (search === "") {
+              return task;
+            } else if (
+              task.title.toLowerCase().includes(search.toLowerCase()) ||
+              task.description.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return task;
+            }
+          })
+          .map((task) => (
+            <Card key={task.id} {...task} fetchTasks={fetchTasks} />
+          ))}
       </div>
-      {newTask && (
-        <Card
-          newTask={newTask}
-          setNewTask={setNewTask}
-          fetchTasks={fetchTasks}
-        />
-      )}
-
-      {/* Add search using title and description */}
-
-      {tasks
-        .filter((task) => {
-          if (search === "") {
-            return task;
-          } else if (
-            task.title.toLowerCase().includes(search.toLowerCase()) ||
-            task.description.toLowerCase().includes(search.toLowerCase())
-          ) {
-            return task;
-          }
-        })
-        .map((task) => (
-          <Card key={task.id} {...task} fetchTasks={fetchTasks} />
-        ))}
-    </div>
+    </>
   );
 }
 export default TaskAPP;

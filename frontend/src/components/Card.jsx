@@ -20,9 +20,15 @@ const Card = (props) => {
 
   const [open, setOpen] = React.useState(false);
   const [title, setTitle] = React.useState(props.title || defaultTask.title);
-  const [description, setDescription] = React.useState(props.description || defaultTask.description);
-  const [dueDate, setDueDate] = React.useState(props.due_date || defaultTask.due_date);
-  const [priority, setPriority] = React.useState(props.priority || defaultTask.priority);
+  const [description, setDescription] = React.useState(
+    props.description || defaultTask.description
+  );
+  const [dueDate, setDueDate] = React.useState(
+    props.due_date || defaultTask.due_date
+  );
+  const [priority, setPriority] = React.useState(
+    props.priority || defaultTask.priority
+  );
 
   const handlePost = async () => {
     // post task

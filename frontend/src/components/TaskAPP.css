@@ -1,13 +1,67 @@
 /* styles.css */
 
+body {
+  background-image: url("https://www.slidebackground.com/uploads/ppt-business-background/good-business-center-powerpoint-template-28.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Optionally, you can set other background properties */
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  /* Remove the background image from the container */
+  background-image: none;
+  /* Optionally, you can set other container styles */
+}
+
+.logout-button {
+  background-color: #101112;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #0056b3;
+}
+
+.Refresh-button {
+  background-color: #101112;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Refresh-button:hover {
+  background-color: #0056b3;
+}
+
+.Task-button {
+  background-color: #101112;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.Task-button:hover {
+  background-color: #0056b3;
 }
 
 .button {
-  background-color: #007bff;
+  background-color: #101112;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -24,19 +78,23 @@ h1 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
+  color: #fff;
 }
 
 input[type="text"] {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #100f0f;
   border-radius: 4px;
   margin-bottom: 20px;
   width: 100%;
+  margin-top: 20px;
+  color: #101112;
 }
 
 .task-list {
   list-style: none;
   padding: 0;
+  color: white;
 }
 
 .task-item {
@@ -45,22 +103,20 @@ input[type="text"] {
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 20px;
+  color: #fff;
 }
 
-.task-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
+.task-title,
 .task-description {
   font-size: 16px;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .task-actions {
   display: flex;
   justify-content: flex-end;
+  color: #fff;
 }
 
 .task-action {
@@ -75,4 +131,9 @@ input[type="text"] {
 
 .task-action:hover {
   background-color: #0056b3;
+}
+
+.Search-span {
+  margin-top: 20px; /* Adjust the value as needed */
+  color: white;
 }

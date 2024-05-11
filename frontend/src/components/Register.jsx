@@ -3,6 +3,7 @@ import "./Register.css";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import img1 from "./../images/117.jpg";
 
 function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -77,9 +78,10 @@ function RegisterForm() {
     <>
       <div className="registration-container">
         <div className="registration-content">
-          <a href="#" className="logo">
+          {/* <a href="#" className="logo">
             Logo
-          </a>
+          </a> */}
+          <img src={img1} alt="Task Management" className="signin-logo" />
 
           <div className="registration-form">
             <p className="registration-heading">Join Us.</p>
@@ -122,9 +124,14 @@ function RegisterForm() {
               </button>
             </div>
 
-            <p className="registration-login">
+            <p className="registration">
               Already have an account?{" "}
-              <a onClick={() => navigate("/signin")}>Sign in here.</a>
+              <button
+                className="registration-login"
+                onClick={() => navigate("/signin")}
+              >
+                Sign in here.
+              </button>
             </p>
           </div>
         </div>

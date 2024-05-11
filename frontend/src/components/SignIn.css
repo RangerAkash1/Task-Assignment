@@ -1,3 +1,7 @@
+body {
+  background-image: url("https://wallpaperaccess.com/full/2314950.jpg");
+}
+
 .signin-container {
   display: flex;
   justify-content: center;
@@ -14,6 +18,7 @@
 .signin-logo {
   width: 150px;
   margin-bottom: 20px;
+  margin-left: 30%;
 }
 
 .signin-heading {
@@ -22,10 +27,12 @@
 }
 
 .signin-form {
+  color: #ccc;
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("https://media.istockphoto.com/vectors/abstract-form-background-vector-id1160194662?k=6&m=1160194662&s=170667a&w=0&h=GRpZOOskXNOKqAItqLt3m1p1F-qPVIGlfpO187Myhoc=");
 }
 
 .signin-input {

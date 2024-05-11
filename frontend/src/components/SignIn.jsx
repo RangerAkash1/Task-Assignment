@@ -4,7 +4,7 @@ import "./SignIn.css";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import img1 from "./../images/116.png";
+import img1 from "./../images/117.jpg";
 
 function SignInForm() {
   const [email, setEmail] = useState("");
@@ -65,9 +65,14 @@ function SignInForm() {
             </button>
           </div>
 
-          <p className="register-button">
+          <p className="register">
             Don't have an account?{" "}
-            <a onClick={() => navigate("/register")}>Register here.</a>
+            <button
+              className="register-button"
+              onClick={() => navigate("/register")}
+            >
+              Register here.
+            </button>
           </p>
         </div>
       </div>
